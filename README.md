@@ -1,16 +1,16 @@
 # Project Name
 
-> One paragraph statement about the project.
+> We’ll be cloning The Next Web, a tech-focused magazine which uses media queries to gracefully degrade their site as the window size is reduced.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This project consists of replicating the The Next Web website putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- HTML 5,
+- CSS 3,
+- @Media queries.
 
 ## Live Demo
 
@@ -19,39 +19,21 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+**To get a local copy up and running follow these simple example steps.**
+- Clone the project unto your local machine
+- Navigate into `index.html` file and run on the browser
 
 ## Authors
 
-👤 **Author1**
+👤 **Miguel Tapia**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@meltrust](https://github.com/meltrust)
+- Linkedin: [meltrust](https://www.linkedin.com/in/meltrust/)
 
-👤 **Author2**
+👤 **Smith Nkereuwem**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@SmithVyne](https://github.com/SmithVyne)
+- Linkedin: [smithvyne](https://www.linkedin.com/in/smithvyne/)
 
 ## 🤝 Contributing
 
