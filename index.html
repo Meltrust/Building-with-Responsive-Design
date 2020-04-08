@@ -3,32 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7f479a55bc.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/latest/normalize.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>TNW</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav class="uppernav">
+        <ul class="upper-left">
           <li>News</li>
           <li>TNW2020</li>
           <li>Business</li>
           <li>Spaces</li>
           <li>Terms & conditions</li>
         </ul>
-        <ul>
+        <ul class="upper-right">
           <li>About</li>
           <li>Advertise</li>
           <li>Jobs</li>
           <li>Contact</li>
         </ul>
       </nav>
-      <nav>
-        <ul>
+
+      <nav class="lowernav">
+        <ul class="lowerlist">
           <li>LATEST</li>
           <li>HARRD FORK</li>
           <li>PLUGGED</li>
@@ -38,55 +40,103 @@
         </ul>
         <div class="search-button-container"></div>
       </nav>
-      <div><p>Did you know we have a TECH FESTIVAL? Check it out →</p></div>
-      <section class="header-grid">
-        <article>
-          <div class="tnw-cover-logo"></div>
-          <p class="cover-date">Tuesday - April 7, 2020</p>
-          <h2 class="title-cover">
-            Facebook apologizes after AI blocks posts about DIY coronavirus
-            masks
-          </h2>
-          <ul class="cover-footer">
-            <li>by <a href="#">Thomas Macaulay</a></li>
-            <li>
-              <i class="icon-clock"></i>
-              <p>1 hour ago</p>
-            </li>
-            <li><i class="icon-share"></i> 5</li>
-          </ul>
-        </article>
-        <article>
-          <a href="#" class="">
-            <p>INSIGHTS</p>
-            <h2>How to make lemonade out of shit</h2>
-            <ul class="cover-footer">
-              <li>by <a href="#">Tristan Greene</a></li>
-              <li>
-                <i class="icon-clock"></i>
-                <p>1 hour ago</p>
-              </li>
-              <li><i class="icon-share"></i> 2</li>
-            </ul>
-          </a>
-        </article>
-        <article>
-          <a href="#" class="">
-            <p>INSIGHTS</p>
-            <h2>
-              WeWork sues SoftBank for scrapping its $3 billion rescue deal
+
+      <div class="banner">Did you know we have a TECH FESTIVAL? Check it out →</div>
+    </header>
+    <section class="header-grid">
+      <article class="huge">
+        <div>
+            <img src="img/index.svg" class="tnw-cover-logo">
+            <p class="cover-date">Tuesday - April 7, 2020</p>
+            <h2 class="title-cover">
+              Facebook apologizes after AI blocks posts about DIY coronavirus
+              masks
             </h2>
             <ul class="cover-footer">
-              <li>by <a href="#">David Canellis</a></li>
+              <li>by <a href="#">Thomas Macaulay</a></li>
               <li>
-                <i class="icon-clock"></i>
-                <p>3 hours ago</p>
+                <i class="far fa-clock"></i>
+                <p>1 hour ago</p>
               </li>
-              <li><i class="icon-share"></i> 15</li>
+              <li>
+                <i class="fas fa-share-alt"></i>
+                15
+              </li>
             </ul>
-          </a>
-        </article>
-      </section>
-    </header>
+        </div>
+      </article>
+      <article class="aside1 aside">
+          <p>INSIGHTS</p>
+          <h2 class="aside-head">How to make lemonade out of shit</h2>
+          <ul class="cover-footer">
+            <li>by <a href="#">Tristan Greene</a></li>
+            <li>
+              <i class="far fa-clock"></i>
+              <p>1 hour ago</p>
+            </li>
+            <li>
+              <i class="fas fa-share-alt"></i>
+              15
+            </li> 
+          </ul>
+      </article>
+      <article class="aside2 aside">
+          <p>P</p>
+          <h2 class="aside-head">
+            WeWork sues SoftBank for scrapping its $3 billion rescue deal
+          </h2>
+
+          <ul class="cover-footer">
+            <li>by <a href="#">David Canellis</a></li>
+            <li>
+              <i class="far fa-clock"></i>
+              <p>1 hour ago</p>
+            </li>
+            <li>
+              <i class="fas fa-share-alt"></i>
+              15
+            </li>
+          </ul>
+      </article>
+    </section>
+
+    <div class="latest">
+      <article>
+        <div class="art-img"></div>
+        <p class="art-desc">
+          Report: Airbnb gouged for over 10% interest on billion-dollar loan
+        </p>
+        <p class="art-foot">
+          <span>David Canellis</span>
+          42 minutes ago
+        </p>
+      </article>
+
+      <article>
+        <div class="art-img"></div>
+        <p class="art-desc">
+          Report: Airbnb gouged for over 10% interest on billion-dollar loan
+        </p>
+        <p class="art-foot">
+          <span>David Canellis</span>
+          42 minutes ago
+        </p>
+      </article>
+      
+      <article>
+        <div class="art-img"></div>
+        <p class="art-desc">
+          Report: Airbnb gouged for over 10% interest on billion-dollar loan
+        </p>
+        <p class="art-foot">
+          <span>David Canellis</span>
+          42 minutes ago
+        </p>
+      </article>
+
+    </div>
+
+
+
   </body>
 </html>
