@@ -9,6 +9,7 @@ body {
 
 .main-header {
   display: initial;
+  z-index: 999;
 }
 .uppernav {
   display: flex;
@@ -87,6 +88,7 @@ body {
   height: 100%;
   transition: ease-in-out;
   visibility: hidden;
+  z-index: 999;
 }
 
 #logo-corner:hover {
@@ -159,6 +161,17 @@ body {
   100% {
     height: 100%;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-corner .popup-menu {
+    position: relative;
+    visibility: visible;
+    padding: 500px;
+  }
+  .nav .lowernav {
+    padding-left: 106px;
   }
 }
 
@@ -290,7 +303,7 @@ body {
 
 .latest {
   margin: 5% auto;
-  width: 60%;
+  max-width: 1192px;
 }
 
 .latest-news-header {
@@ -315,6 +328,7 @@ body {
 .latest-grid article {
   cursor: pointer;
 }
+
 .art-img {
   height: 60%;
   width: 100%;
@@ -364,6 +378,77 @@ body {
 
 .art-foot {
   margin: 0;
-  color: gray;
+  color: rgb(182, 182, 182);
   font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .show {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .latest {
+    width: 95%;
+    min-width: 95%;
+  }
+  .latest-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 226px 226px 226px;
+  }
+  .art-img {
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    cursor: pointer;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .latest {
+    height: 684px;
+  }
+
+  .latest-grid article {
+    position: relative;
+    z-index: -1;
+    margin: 2px 0;
+  }
+
+  .art-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75px;
+    padding-top: 25px;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+  .art-desc {
+    margin: 0 0 0 90px;
+    font-size: 13px;
+    font-family: "Liberation Sans Bold";
+  }
+
+  .art-foot {
+    margin: 0 0 0 90px;
+    color: rgb(182, 182, 182);
+    font-size: 12px;
+    padding-top: 10px;
+    font-family: "Liberation Sans";
+  }
+
+  .latest-grid article:hover {
+    color: #ff4422;
+  }
 }
