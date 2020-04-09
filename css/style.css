@@ -1,7 +1,15 @@
 body {
   box-sizing: border-box;
+  font-family: Helvetica Neue, Arial, sans-serif;
 }
 
+.hidden-elements {
+  visibility: hidden;
+}
+
+.main-header {
+  display: initial;
+}
 .uppernav {
   display: flex;
   width: 100%;
@@ -10,6 +18,7 @@ body {
   font-size: 13px;
   align-items: center;
   height: 30px;
+  letter-spacing: 1px;
 }
 
 .upper-left {
@@ -37,36 +46,110 @@ body {
   cursor: pointer;
 }
 
+.sticky-nav {
+  position: sticky;
+  top: 0;
+}
+
 .lowernav {
   display: flex;
   width: 100%;
-  background: rgb(167, 114, 114);
-  color: black;
+  background: rgb(255, 255, 255);
+  color: #aaa;
   font-size: 13px;
+  font-weight: 500;
   align-items: center;
   height: 50px;
+  font-family: sans-serif;
+  letter-spacing: 0.04em;
+  justify-content: space-between;
+  position: relative;
 }
 
-.lowerlist {
+#lowerlist {
   list-style: none;
   display: flex;
   padding-left: 20px;
+  transition: 0.5s;
 }
 
-.lowerlist li {
+#lowerlist li {
   margin-right: 30px;
   cursor: pointer;
 }
 
-.banner {
+#logo-corner {
+  width: 106px;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: ease-in-out;
+}
+
+#logo-corner:hover {
+  background-image: url(/img/logobackground.gif);
+  background-position: 50%;
+  background-size: cover;
+}
+
+#logo-corner img {
+  padding: 16px;
+}
+
+#logo-corner .popup-menu {
+  visibility: hidden;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-items: space-between;
+  padding: 5px 0;
+  top: 50px;
+  left: 0;
+  position: absolute;
+  width: 106px;
+  z-index: 20;
+  font-size: 13px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.popup-menu li {
+  text-decoration: none;
+  padding: 10px 0;
+  text-align: center;
+  margin-left: 25%;
+  color: gray;
+  font-family: "Liberation Sans", Helvetica;
+}
+
+.popup-menu li:hover {
+  color: white;
+}
+
+#logo-corner .show {
+  visibility: visible;
+}
+
+.search-button-container {
+  padding: 1%;
+  border-left: 1px solid #eee;
+  cursor: pointer;
+}
+
+#banner {
   display: flex;
   background: yellow;
   padding-left: 20px;
   margin: 0;
   width: 100%;
-  height: 40px;
+  height: 30px;
   align-items: center;
   cursor: pointer;
+  transition: 0.4s ease;
+  font-size: 12.8px;
 }
 
 .header-grid {
@@ -176,21 +259,9 @@ body {
   width: 35%;
 }
 
-@font-face {
-  font-family: ARS Maquette;
-  src: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/ars-maquette-regular.eot#iefix")
-      format("embedded-opentype"),
-    url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/ars-maquette-regular.woff")
-      format("woff"),
-    url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/fonts/ars-maquette-regular.ttf")
-      format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-
 .latest {
-  margin: 5% 18% 20px 20%;
-  font-family: "ARS Maquette", Arial, Helvetica, sans-serif;
+  margin: 5% auto;
+  width: 60%;
 }
 
 .latest-news-header {
@@ -198,15 +269,23 @@ body {
   font-size: 26px;
   font-weight: 1000;
   letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.latest-news-header:hover {
+  color: black;
 }
 
 .latest-grid {
   display: grid;
-  grid-template-columns: 22% 22% 22% 22%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 226px 226px;
-  gap: 1.3% 1.3%;
+  gap: 1.3% 1.9%;
 }
 
+.latest-grid article {
+  cursor: pointer;
+}
 .art-img {
   height: 60%;
   width: 100%;
@@ -248,6 +327,10 @@ body {
 
 .art-desc {
   margin: 3% auto;
+}
+
+.art-desc:hover {
+  color: #ff4422;
 }
 
 .art-foot {

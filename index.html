@@ -12,10 +12,15 @@
       href="https://necolas.github.io/normalize.css/latest/normalize.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://blogfonts.com/css/aWQ9MTUyMDg3JnN1Yj04NyZjPXMmdHRmPVNoZW50b3grTGlnaHQudHRmJm49c2hlbnRveC01/Shentox.ttf"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>TNW</title>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <nav class="uppernav">
         <ul class="upper-left">
           <li>News</li>
@@ -32,26 +37,62 @@
         </ul>
       </nav>
 
-      <nav class="lowernav">
-        <ul class="lowerlist">
-          <li>LATEST</li>
-          <li>HARRD FORK</li>
-          <li>PLUGGED</li>
-          <li>FUNDAMENTALS</li>
-          <li>README</li>
-          <li>NEURAL</li>
-        </ul>
-        <div class="search-button-container"></div>
-      </nav>
+      <div class="sticky-nav">
+        <nav class="lowernav">
+          <ul id="lowerlist">
+            <li
+              id="logo-corner"
+              onmouseover="myFunction()"
+              onmouseout="myFunction()"
+            >
+              <img src="/img/tnw.svg" alt="" />
+              <ul class="popup-menu" id="myPopup">
+                <li>
+                  News
+                </li>
+                <li>
+                  Events
+                </li>
+                <li>
+                  Index
+                </li>
+                <li>
+                  TQ
+                </li>
+                <li>
+                  Deals
+                </li>
+                <li>
+                  Answers
+                </li>
+                <li>
+                  TNW X
+                </li>
+              </ul>
+            </li>
+            <li>LATEST</li>
+            <li>HARD FORK</li>
+            <li>PLUGGED</li>
+            <li>FUNDAMENTALS</li>
+            <li>README</li>
+            <li>NEURAL</li>
+          </ul>
+          <div class="search-button-container">
+            <i class="fas fa-search fa-flip-horizontal fa-lg"></i>
+          </div>
+        </nav>
 
-      <div class="banner">
-        Did you know we have a TECH FESTIVAL? Check it out →
+        <div id="banner">
+          Did you know we have a TECH FESTIVAL? Check it out →
+        </div>
       </div>
     </header>
+
     <section class="header-grid">
+      <h2 class="hidden-elements">Header grid</h2>
       <article class="huge">
         <div>
-          <img src="img/index.svg" class="tnw-cover-logo" />
+          <img src="img/index.svg" alt="" class="tnw-cover-logo" />
           <p class="cover-date">Tuesday - April 7, 2020</p>
           <h2 class="title-cover">
             Facebook apologizes after AI blocks posts about DIY coronavirus
@@ -125,6 +166,7 @@
           <h4 class="art-desc">
             The internet is obsessed with redesigning the new PS5 controller
           </h4>
+          <br />
           <p class="art-foot">
             <span>Mix</span>
             42 minutes ago
@@ -169,6 +211,7 @@
           <h4 class="art-desc">
             Why conspiracy theories flourish during pandemics
           </h4>
+          <br />
           <p class="art-foot">
             <span>The Conversation</span>
             42 minutes ago
@@ -190,6 +233,7 @@
           <h4 class="art-desc">
             MIT's sprayable sensor can turn your sofa armrest into a TV remote
           </h4>
+          <br />
           <p class="art-foot">
             <span>Ivan Mehta</span>
             42 minutes ago
@@ -197,5 +241,33 @@
         </article>
       </div>
     </section>
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          document.getElementById("logo-corner").style.display = "block";
+          document.getElementById("lowerlist").style.paddingLeft = "120px";
+          document.getElementById("banner").style.paddingLeft = "120px";
+        } else {
+          document.getElementById("logo-corner").style.display = "none";
+          document.getElementById("lowerlist").style.paddingLeft = "20px";
+          document.getElementById("banner").style.paddingLeft = "20px";
+        }
+      }
+    </script>
+    <script>
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
