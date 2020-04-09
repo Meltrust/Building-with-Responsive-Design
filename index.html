@@ -249,14 +249,14 @@
 
       function scrollFunction() {
         if (
-          document.body.scrollTop > 50 ||
-          document.documentElement.scrollTop > 50
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
         ) {
-          document.getElementById("logo-corner").style.display = "block";
+          document.getElementById("logo-corner").style.visibility = "visible";
           document.getElementById("lowerlist").style.paddingLeft = "120px";
           document.getElementById("banner").style.paddingLeft = "120px";
         } else {
-          document.getElementById("logo-corner").style.display = "none";
+          document.getElementById("logo-corner").style.visibility = "hidden";
           document.getElementById("lowerlist").style.paddingLeft = "20px";
           document.getElementById("banner").style.paddingLeft = "20px";
         }
