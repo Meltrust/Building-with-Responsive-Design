@@ -125,12 +125,40 @@ body {
   font-family: "Liberation Sans", Helvetica;
 }
 
+.popup-menu li:first-child {
+  color: white;
+}
+
 .popup-menu li:hover {
   color: white;
 }
 
 #logo-corner .show {
   visibility: visible;
+  animation: fadeIn 90ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  25% {
+    height: 25%;
+    opacity: 0.25;
+  }
+  50% {
+    height: 50%;
+    opacity: 0.5;
+  }
+  75% {
+    height: 75%;
+    opacity: 0.75;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 .search-button-container {
