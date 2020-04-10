@@ -1021,7 +1021,7 @@ body {
   .upper-right {
     padding: 0;
   }
-  .upper-right li:last-of-type {
+  .upper-right li {
     display: none;
   }
   #banner {
