@@ -393,7 +393,7 @@ body {
 }
 
 .art-img-4 {
-  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/sale_27613_primary_image_wide-540x270.jpg );
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/sale_27613_primary_image_wide-540x270.jpg);
 }
 
 .art-img-5 {
@@ -404,7 +404,7 @@ body {
 }
 
 .art-img-7 {
-  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-516x270.png);1fr 1fr 1fr 1fr
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-516x270.png);
 }
 
 .art-img-8 {
@@ -519,7 +519,10 @@ body {
   text-decoration: none;
 }
 
-.rounds-left:hover, .rounds-right:hover, .deals-top-left:hover, .deals-top-right:hover {
+.rounds-left:hover,
+.rounds-right:hover,
+.deals-top-left:hover,
+.deals-top-right:hover {
   color: black;
 }
 
@@ -564,7 +567,6 @@ body {
   position: relative;
   z-index: -1;
 }
-
 
 .fund-top h3 {
   margin: 0;
@@ -686,7 +688,7 @@ body {
   height: 100%;
   background: url(https://cdnp0.stackassets.com/7a3bbbe12b77586ca58798dc2aac6b0f51f7a8ac/store/f9f2b2fcf253000289dc27dcaaa106fa4b1a0c3e579bbc0612dd572eee70/sale_26993_primary_image.jpg);
   background-size: cover;
-  cursor: pointer ;
+  cursor: pointer;
 }
 
 .deals-title {
@@ -712,7 +714,8 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1024px){ /*///////1024///////////*/
+@media (max-width: 1024px) {
+  /*///////1024///////////*/
   .funding {
     width: 95%;
   }
@@ -749,17 +752,16 @@ body {
     grid-row-gap: 20px;
     justify-content: space-between;
   }
-  
+
   .deals-title {
     font-size: 0.9em;
     margin-bottom: 5px;
   }
-    
 }
 
 @media (max-width: 767px) {
   /*///////768///////////*/
-    .funding-main {
+  .funding-main {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
@@ -849,47 +851,44 @@ body {
     grid-row: 3/4;
   }
 
+  .deals-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    cursor: pointer;
+    gap: 10px;
+    height: 100%;
+  }
 
+  .latest-deals {
+    height: 684px;
+  }
 
-.deals-body {
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  width: 100%;
-  cursor: pointer;
-  gap: 10px;
-  height: 100%;
+  .deals {
+    position: relative;
+    z-index: -1;
+    margin: 15px 0;
+  }
+
+  .deals-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75px;
+    padding-top: 25px;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+  .deals-title,
+  .deals-price {
+    margin: 0 0 0 90px;
+    font-size: 13px;
+    font-family: "Liberation Sans Bold";
+  }
 }
-
-.latest-deals {
-  height: 684px;
-}
-
-.deals {
-  position: relative;
-  z-index: -1;
-  margin: 15px 0;
-}
-
-.deals-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 75px;
-  padding-top: 25px;
-  background-position: 50%;
-  background-size: cover;
-  z-index: 0;
-  transition: 0.5s;
-}
-
-.deals-title, .deals-price {
-  margin: 0 0 0 90px;
-  font-size: 13px;
-  font-family: "Liberation Sans Bold";
-}
-
-}
-
 
 /* latest news section starts here */
 
@@ -1054,7 +1053,7 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-.news-latest-section-headline h4 {
+.news-latest-section-headline div {
   color: #555;
   padding: 6px 0 6px 14px;
   margin: 0 auto;
@@ -1290,6 +1289,10 @@ body {
   cursor: pointer;
 }
 
+.hidden-stuff {
+  visibility: hidden;
+}
+
 @media (max-width: 1023px) {
   .news-section-grid {
     grid-template-columns: 1fr 1fr;
@@ -1343,6 +1346,3 @@ body {
     display: none;
   }
 }
-
-
-
