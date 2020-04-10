@@ -1010,6 +1010,7 @@ body {
     display: none;
   }
 }
+
 @media (max-width: 768px) {
   .upper-left {
     padding-left: 2%;
