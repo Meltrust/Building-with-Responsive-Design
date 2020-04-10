@@ -942,33 +942,60 @@
       </div>
     </section>
 
-    <script>
-      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          document.getElementById("logo-corner").style.visibility = "visible";
-          document.getElementById("lowerlist").style.paddingLeft = "120px";
-          document.getElementById("banner").style.paddingLeft = "120px";
-        } else {
-          document.getElementById("logo-corner").style.visibility = "hidden";
-          document.getElementById("lowerlist").style.paddingLeft = "20px";
-          document.getElementById("banner").style.paddingLeft = "20px";
-        }
-      }
-    </script>
-    <script>
-      // When the user clicks on div, open the popup
-      function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-      }
-    </script>
+    <!-- last footer starts here -->
+    <footer class="main-footer">
+      <div class="main-footer-upper">
+        <div class="main-footer-upper-links-container">
+          <ul class="main-footer-upper-links-container-iconslist">
+            <li>
+              <div><i class="fab fa-facebook"></i> </i></div>
+            </li>
+            <li>
+              <div><i class="fab fa-twitter-square"></i></i></div>
+            </li>
+            <li>
+              <div><i class="fab fa-youtube-square"></i></div>
+            </li>
+            <li>
+              <div><i class="fab fa-instagram"></i></div>
+            </li>
+            <li>
+              <div><i class="fab fa-pinterest-p"></i></div>
+            </li>
+            <li>
+              <div><i class="fas fa-rss"></i></div>
+            </li>
+            <li>
+              <div><i class="far fa-envelope"></i></div>
+            </li>
+          </ul>
+          <ul class="footer-links">
+            <li>EVENTS</li>
+            <li>ABOUT</li>
+            <li>ADVERTISE</li>
+            <li>JOBS</li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-footer-lower">
+        <div class="main-footer-lower-container">
+            <span>
+              
+                <img alt="The Next Web" class="main-footer-logo" src="https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg">
+              © 2006–2020 The Next Web B.V.
+            </span>  
+            <span>
+              Made with
+              <b>♥</b>
+              in Amsterdam.  
+            </span>
+            <span>
+               Powered by <img alt="StackPath" class="StackPath" src="https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/stackpath.svg">
+            </span>
+        </div>
+      </div>
+    </footer>
+  
   </body>
 </html>
