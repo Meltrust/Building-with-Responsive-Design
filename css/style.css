@@ -10,8 +10,11 @@ body {
 
 .main-header {
   display: initial;
-  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
+
 .uppernav {
   display: flex;
   width: 100%;
@@ -46,11 +49,6 @@ body {
 .upper-right li {
   margin-right: 10px;
   cursor: pointer;
-}
-
-.sticky-nav {
-  position: sticky;
-  top: 0;
 }
 
 .lowernav {
@@ -108,7 +106,7 @@ body {
   padding: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #logo-corner-mobile {
     visibility: visible;
   }
@@ -211,7 +209,7 @@ body {
   grid-template-rows: 227px 227px;
   grid-gap: 10px;
   color: white;
-  margin: 0% 0.3%;
+  margin: 106px 0.3% 0 0.3%;
 }
 
 .huge {
@@ -346,7 +344,7 @@ body {
   max-width: 1192px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .latest {
     margin-bottom: 25%;
   }
@@ -448,7 +446,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .latest-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -648,7 +646,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /*///////768///////////*/
   .funding {
   }
@@ -984,7 +982,162 @@ body {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/Person-using-laptop-on-plane-Wi-Fi-hed.jpg");
 }
 
-@media (max-width: 1024px) {
+/* MAIN FOOTER STARTS HERE */
+.main-footer {
+  z-index: -999;
+}
+
+.main-footer-upper {
+  border: solid 3px;
+  width: 100%;
+  padding: 3em 0;
+  background: #131313;
+}
+
+.main-footer-upper-links-container {
+  margin: 0 auto;
+  max-width: 1192px;
+  padding: 0 25px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.footer-links li {
+  color: #aaa;
+  margin: 0 6px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #fff;
+}
+
+.main-footer-upper-links-container-iconslist {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 1.5em 0;
+}
+
+.main-footer-upper-links-container-iconslist li {
+  margin: 0 8px;
+  display: flex;
+}
+
+.main-footer-upper-links-container-iconslist div {
+  background: #333;
+  border-radius: 50%;
+  height: 40px;
+  padding: 12px;
+  text-align: center;
+  width: 40px;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.main-footer-upper-links-container-iconslist div:hover {
+  background-color: #000;
+}
+
+.fa-facebook {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+  right: 1px;
+}
+
+.fa-twitter-square {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+}
+
+.fa-youtube-square {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+}
+
+.fa-instagram {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+}
+
+.fa-pinterest-p {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+}
+
+.fa-rss {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+}
+
+.fa-envelope {
+  background: transparent;
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  color: #fff;
+  position: relative;
+  top: 3.9px;
+  right: 1px;
+}
+
+.main-footer-lower {
+  padding: 3em 0;
+  background: #000;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.main-footer-lower-container {
+  margin: 0 auto;
+  max-width: 1192px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-footer-lower-container img {
+  height: 9px;
+  margin-right: 1px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
   .news-section-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -993,7 +1146,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .news-section-grid {
     grid-template-columns: 1fr;
   }
@@ -1008,15 +1161,9 @@ body {
   .news-article {
     height: 300px;
   }
-}
-
-@media screen and (max-width: 768px) {
   .change-on-mobile {
     display: none;
   }
-}
-
-@media (max-width: 768px) {
   .upper-left {
     padding-left: 2%;
   }
@@ -1029,7 +1176,17 @@ body {
   .upper-right li {
     display: none;
   }
-  #banner {
-    height: 60px;
+  .main-footer-lower-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-footer-lower span {
+    padding-top: 10px;
+  }
+  .main-footer-upper-links-container-iconslist li:last-child {
+    display: none;
+  }
+  .main-footer-upper-links-container-iconslist li:first-of-type {
+    display: none;
   }
 }
