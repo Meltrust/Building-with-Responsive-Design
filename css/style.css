@@ -348,7 +348,7 @@ body {
 
 @media (max-width: 768px) {
   .latest {
-    margin-bottom: 15%;
+    margin-bottom: 25%;
   }
 }
 
@@ -997,6 +997,11 @@ body {
   .news-section-grid {
     grid-template-columns: 1fr;
   }
+
+  .news-section {
+    margin-top: 10%;
+  }
+
   .news-header {
     margin-bottom: 1%;
   }
