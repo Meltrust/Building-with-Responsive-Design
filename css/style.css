@@ -637,7 +637,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1192px;
-  margin: 20px auto 0;
+  margin: 20px auto 15%;
 }
 
 .deals-top {
@@ -1006,7 +1006,7 @@ body {
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-`}
+}
 
 .news-latest-section {
   display: flex;
@@ -1309,7 +1309,7 @@ body {
   }
 
   .news-header {
-    margin-bottom: 1%;
+    margin-bottom: 15%;
   }
   .news-article {
     height: 300px;
