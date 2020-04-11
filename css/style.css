@@ -1070,6 +1070,12 @@ body {
     visibility: visible;
   }
 
+  .logo-corner-mobile img {
+    -webkit-padding-start: initial;
+    margin-bottom: 0;
+    max-height: -webkit-fill-available;
+  }
+
   .latest-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 1fr);
