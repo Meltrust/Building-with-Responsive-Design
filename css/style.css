@@ -66,19 +66,45 @@ body {
   position: relative;
 }
 
-#lowerlist {
+.cover-footer {
+  font-size: 11px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  color: rgb(236, 236, 236);
+  margin: 0;
+}
+
+.cover-footer li {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cover-footer a {
+  margin-left: 4px;
+  text-decoration: none;
+  color: rgb(236, 236, 236);
+}
+
+.cover-footer a:hover {
+  color: white;
+  font-size: 11.5px;
+}
+
+.lowerlist {
   list-style: none;
   display: flex;
   padding-left: 20px;
   transition: 0.5s;
 }
 
-#lowerlist li {
+.lowerlist li {
   margin-right: 30px;
   cursor: pointer;
 }
 
-#logo-corner {
+.logo-corner-mobile {
   width: 106px;
   background: linear-gradient(to bottom right, #c09, #f42 85%);
   position: absolute;
@@ -90,99 +116,8 @@ body {
   z-index: 999;
 }
 
-#logo-corner-mobile {
-  width: 106px;
-  background: linear-gradient(to bottom right, #c09, #f42 85%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  transition: ease-in-out;
-  visibility: hidden;
-  z-index: 999;
-}
-
-#logo-corner-mobile img {
+.logo-corner-mobile img {
   padding: 16px;
-}
-
-@media (max-width: 767px) {
-  #logo-corner-mobile {
-    visibility: visible;
-  }
-}
-
-#logo-corner:hover {
-  background-image: url(../img/logobackground.gif);
-  background-position: 50%;
-  background-size: cover;
-}
-
-#logo-corner img {
-  padding: 16px;
-}
-
-#logo-corner .popup-menu {
-  visibility: hidden;
-  background: black;
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  justify-items: space-between;
-  padding: 5px 0;
-  top: 50px;
-  left: 0;
-  position: absolute;
-  width: 106px;
-  z-index: 20;
-  font-size: 13px;
-  list-style: none;
-  text-decoration: none;
-}
-
-.popup-menu li {
-  text-decoration: none;
-  padding: 10px 0;
-  text-align: center;
-  margin-left: 25%;
-  color: gray;
-  font-family: "Liberation Sans", Helvetica;
-}
-
-.popup-menu li:first-child {
-  color: white;
-}
-
-.popup-menu li:hover {
-  color: white;
-}
-
-#logo-corner .show {
-  visibility: visible;
-  animation: fadeIn 90ms;
-}
-
-@keyframes fadeIn {
-  0% {
-    height: 0%;
-    opacity: 0;
-  }
-  25% {
-    height: 25%;
-    opacity: 0.25;
-  }
-  50% {
-    height: 50%;
-    opacity: 0.5;
-  }
-  75% {
-    height: 75%;
-    opacity: 0.75;
-  }
-  100% {
-    height: 100%;
-    opacity: 1;
-  }
 }
 
 .search-button-container {
@@ -191,7 +126,7 @@ body {
   cursor: pointer;
 }
 
-#banner {
+.banner {
   display: flex;
   background: yellow;
   padding-left: 20px;
@@ -216,12 +151,12 @@ body {
 .huge {
   grid-column: 1/2;
   grid-row: 1/3;
-  background-image: 
-  linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.883),
-    rgba(29, 28, 28, 0.849) 60%,
-    rgb(0, 0, 0) 100%
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 0, 0, 0.883),
+      rgba(29, 28, 28, 0.849) 60%,
+      rgb(0, 0, 0) 100%
     ),
     url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/kayleighmcenany-796x419.jpg);
   background-size: contain;
@@ -263,32 +198,6 @@ body {
   margin: 0;
 }
 
-.cover-footer {
-  font-size: 11px;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  color: rgb(236, 236, 236);
-  margin: 0;
-}
-
-.cover-footer li {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.cover-footer a {
-  margin-left: 4px;
-  text-decoration: none;
-  color: rgb(236, 236, 236);
-}
-
-.cover-footer a:hover {
-  color: white;
-  font-size: 11.5px;
-}
-
 .aside {
   display: grid;
   align-content: end;
@@ -303,7 +212,7 @@ body {
   background: grey;
   padding-left: 20px;
   background-image:
-      linear-gradient(
+    linear-gradient(
       135deg,
       rgba(255, 0, 0, 0.883),
       rgba(29, 28, 28, 0.849) 60%,
@@ -318,8 +227,8 @@ body {
   grid-row: 2/3;
   background: grey;
   padding-left: 20px;
-  background-image: 
-      linear-gradient(
+  background-image:
+    linear-gradient(
       135deg,
       rgba(255, 0, 0, 0.883),
       rgba(29, 28, 28, 0.849) 60%,
@@ -335,8 +244,6 @@ body {
 }
 
 .aside ul {
-  margin-left: 0;
-  margin-bottom: 5px;
   margin: 0;
 }
 
@@ -347,12 +254,6 @@ body {
 .latest {
   margin: 5% auto;
   max-width: 1192px;
-}
-
-@media (max-width: 767px) {
-  .latest {
-    margin-bottom: 25%;
-  }
 }
 
 .latest-news-header {
@@ -404,6 +305,7 @@ body {
 .art-img-5 {
   background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/ev-tesla-bmw-nissan-leaf-i3-vw-eup-magnetic-field-pacemaker-cied-cardiac-480x270.jpg);
 }
+
 .art-img-6 {
   background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-11-516x270.jpg);
 }
@@ -430,77 +332,6 @@ body {
   font-size: 13px;
 }
 
-@media (max-width: 1024px) {
-  .show {
-    visibility: hidden;
-  }
-}
-
-@media (max-width: 1024px) {
-  .latest {
-    width: 95%;
-    min-width: 95%;
-  }
-  .latest-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 226px 226px 226px;
-  }
-  .art-img {
-    transition: 0.5s;
-  }
-}
-
-@media (max-width: 767px) {
-  .latest-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
-    width: 100%;
-    cursor: pointer;
-    gap: 10px;
-    height: 100%;
-  }
-
-  .latest {
-    height: 684px;
-  }
-
-  .latest-grid article {
-    position: relative;
-    z-index: -1;
-    margin: 2px 0;
-  }
-
-  .art-img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 75px;
-    padding-top: 25px;
-    background-position: 50%;
-    background-size: cover;
-    z-index: 0;
-    transition: 0.5s;
-  }
-
-  .art-desc {
-    margin: 0 0 0 90px;
-    font-size: 13px;
-    font-family: "Liberation Sans Bold";
-  }
-
-  .art-foot {
-    margin: 0 0 0 90px;
-    color: rgb(182, 182, 182);
-    font-size: 12px;
-    padding-top: 10px;
-    font-family: "Liberation Sans";
-  }
-
-  .latest-grid article:hover {
-    color: #f42;
-  }
-}
-
 /* FUNDING SECTION */
 .funding {
   display: flex;
@@ -516,27 +347,6 @@ body {
   margin-bottom: 20px;
 }
 
-.rounds-left {
-  flex: 1;
-  font-size: 1.5em;
-  color: #f42;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.rounds-left:hover,
-.rounds-right:hover,
-.deals-top-left:hover,
-.deals-top-right:hover {
-  color: black;
-}
-
-.rounds-r {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .rounds-right {
   text-decoration: none;
   color: #f42;
@@ -546,6 +356,20 @@ body {
 
 .rounds-right-last {
   border: none;
+}
+
+.rounds-left {
+  flex: 1;
+  font-size: 1.5em;
+  color: #f42;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.rounds-r {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .funding-main {
@@ -606,6 +430,10 @@ body {
   bottom: 20%;
 }
 
+.news-latest-section-headline p {
+  margin: 0 auto;
+}
+
 .fund-center {
   margin-top: 2%;
   padding-left: 14px;
@@ -617,6 +445,11 @@ body {
   font-size: 14px;
 }
 
+.fund-foot p {
+  margin: 3% 0 0;
+  cursor: pointer;
+}
+
 .fund-center p:hover {
   color: black;
 }
@@ -626,11 +459,6 @@ body {
   margin-top: 5%;
   font-size: 14px;
   padding-left: 14px;
-}
-
-.fund-foot p {
-  margin: 3% 0 0;
-  cursor: pointer;
 }
 
 .fund-foot small {
@@ -670,6 +498,13 @@ body {
   justify-content: flex-end;
   text-decoration: none;
   color: #f42;
+}
+
+.rounds-left:hover,
+.rounds-right:hover,
+.deals-top-left:hover,
+.deals-top-right:hover {
+  color: black;
 }
 
 .deals-body {
@@ -889,10 +724,6 @@ body {
   line-height: 1.5;
 }
 
-.news-latest-section-headline p {
-  margin: 0 auto;
-}
-
 .news-latest-section-headline p:hover {
   color: gray;
 }
@@ -985,20 +816,6 @@ body {
   padding: 0;
   margin: 0;
   justify-content: center;
-}
-
-.footer-links li {
-  color: #aaa;
-  margin: 0 6px;
-  font-family: sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 23px;
-  cursor: pointer;
-}
-
-.footer-links li:hover {
-  color: #fff;
 }
 
 .main-footer-upper-links-container-iconslist {
@@ -1094,6 +911,20 @@ body {
   right: 1px;
 }
 
+.footer-links li {
+  color: #aaa;
+  margin: 0 6px;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  color: #fff;
+}
+
 .main-footer-lower {
   padding: 3em 0;
   background: #000;
@@ -1121,15 +952,47 @@ body {
 }
 
 @media (max-width: 1023px) {
+  .latest {
+    width: 95%;
+    min-width: 95%;
+    height: 684px;
+  }
+
+  .latest-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 226px 226px 226px;
+  }
+
+  .latest-grid article {
+    position: relative;
+    z-index: -1;
+    margin: 2px 0;
+  }
+
+  .art-foot {
+    margin: 0 0 0 90px;
+    color: rgb(182, 182, 182);
+    font-size: 12px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .latest-grid article:hover {
+    color: #f42;
+  }
+
   .news-section-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .news-header {
     margin-bottom: 10%;
   }
+
   .funding {
     width: 95%;
   }
+
   .funding-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1171,6 +1034,19 @@ body {
 }
 
 @media (max-width: 767px) {
+  .logo-corner-mobile {
+    visibility: visible;
+  }
+
+  .latest-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    cursor: pointer;
+    gap: 10px;
+    height: 100%;
+  }
+
   .news-section-grid {
     grid-template-columns: 1fr;
   }
@@ -1182,37 +1058,66 @@ body {
   .news-header {
     margin-bottom: 15%;
   }
+
   .news-article {
     height: 300px;
   }
+
   .change-on-mobile {
     display: none;
   }
-  .upper-left {
-    padding-left: 2%;
-  }
-  .upper-left li:last-of-type {
-    display: none;
-  }
+
   .upper-right {
     padding: 0;
   }
+
   .upper-right li {
     display: none;
   }
+
+  .upper-left {
+    padding-left: 2%;
+  }
+
+  .upper-left li:last-of-type {
+    display: none;
+  }
+
+  .art-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75px;
+    padding-top: 25px;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0;
+    transition: 0.5s;
+  }
+
+  .art-desc {
+    margin: 0 0 0 90px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .main-footer-lower-container {
     flex-direction: column;
     align-items: center;
   }
+
   .main-footer-lower span {
     padding-top: 10px;
   }
+
   .main-footer-upper-links-container-iconslist li:last-child {
     display: none;
   }
+
   .main-footer-upper-links-container-iconslist li:first-of-type {
     display: none;
   }
+
   .funding-main {
     display: grid;
     grid-template-columns: 1fr;
@@ -1251,6 +1156,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
+  }
+
+  .latest {
+    margin-bottom: 25%;
   }
 
   .rounds-left {
@@ -1337,6 +1246,6 @@ body {
   .deals-price {
     margin: 0 0 0 90px;
     font-size: 13px;
-    font-family: "Liberation Sans Bold";
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
