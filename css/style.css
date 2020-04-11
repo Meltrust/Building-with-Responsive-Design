@@ -522,12 +522,44 @@ body {
 }
 
 .deals-img {
-  content: "";
   width: 100%;
   height: 100%;
-  background: url(https://cdnp0.stackassets.com/7a3bbbe12b77586ca58798dc2aac6b0f51f7a8ac/store/f9f2b2fcf253000289dc27dcaaa106fa4b1a0c3e579bbc0612dd572eee70/sale_26993_primary_image.jpg);
   background-size: cover;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+.deals-img1 {
+  background-image: url(https://cdnp0.stackassets.com/7a3bbbe12b77586ca58798dc2aac6b0f51f7a8ac/store/f9f2b2fcf253000289dc27dcaaa106fa4b1a0c3e579bbc0612dd572eee70/sale_26993_primary_image.jpg);
+}
+
+.deals-img2 {
+  background-image: url(https://cdnp1.stackassets.com/cba31166b47b2c151d94a8397c4aa0604771f268/store/04b44dd5593f2a7c175e4dd48292fe76d560b9c1c0536d03345aa8c50141/sale_18367_primary_image.jpg);
+}
+
+.deals-img3 {
+  background-image: url(https://cdnp2.stackassets.com/9257668fcaee11d85700e41e6f0885af53444764/store/c3e91210d1e14fad0bbd67762249ba37d7293eff10e62c29ed5b6c368248/sale_27001_primary_image.jpg);
+}
+
+.deals-img4 {
+  background-image: url(https://cdnp0.stackassets.com/b71a35933bfff2f4b68162cdd15511d4c852028e/store/213bde39c7285726394c4afed207d57cfd6bf224453c2c0edbfc12a448e8/sale_24208_primary_image.jpg);
+}
+
+.deals-img5 {
+  background-image: url(https://cdnp0.stackassets.com/0799bf00352de2d2111fa7580a4aeb4d5e36829c/store/831574f40ca85b498631ae2881f81d02cd9eedd411afd5c0c8f689969ad6/sale_19040_primary_image.jpg);
+}
+
+.deals-img6 {
+  background-image: url(https://cdnp1.stackassets.com/a4a04dbdfa33745ffe1eadfe357643683d4fff9e/store/d8dbd9630bd4d7226a9604c67b90e36eb94c412d5be18e4bbabb19aba4f9/sale_27009_primary_image.jpg);
+}
+
+.deals-img7 {
+  background-image: url(https://cdnp3.stackassets.com/91269f67479c8ba9b50a1afd8c9895a43faed8bb/store/68076d638abc4b1c252b05e65253424957f0ff9549c7bd37b82b975620a8/sale_27020_primary_image.jpg);
+}
+
+.deals-img8 {
+  background-image: url(https://cdnp0.stackassets.com/a1b45c57042cdef1f1b897016cfde23589de621d/store/55c827cf0a6ce820b885872694c7271be3c3e8f89e91e59b2637a866fffa/sale_25748_primary_image.jpg);
 }
 
 .deals-title {
@@ -1099,6 +1131,10 @@ body {
     margin: 0 0 0 90px;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .main-footer {
+    margin-top: 5%;
   }
 
   .main-footer-lower-container {
