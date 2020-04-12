@@ -454,6 +454,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  padding-top: 4px;
 }
 
 .funding-main {
@@ -469,12 +470,13 @@ body {
   flex-basis: 24%;
   flex-direction: column;
   color: #555;
+  background-color: rgba(255, 67, 34, 0.027);
 }
 
 .fund-top {
   display: flex;
   width: 100%;
-  background: #ff432232;
+  background: rgba(255, 68, 34, 0.08);
   margin: 0;
   flex-direction: column;
   position: relative;
@@ -502,6 +504,8 @@ body {
 .fund-type {
   margin: 0;
   font-size: 0.7em;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 .fund-img {
@@ -535,29 +539,40 @@ body {
 
 .fund-center p {
   margin: 3% 0 0;
-  font-size: 14px;
+  font-size: 13px;
+  color: rgb(68, 68, 68);
 }
 
 .fund-foot p {
   margin: 3% 0 0;
   cursor: pointer;
+  color: rgb(68, 68, 68);
 }
 
 .fund-center p:hover {
   color: black;
 }
 
+.fa-tag {
+  margin-right: 10px;
+}
+
+.fa-briefcase {
+  margin-right: 10px;
+}
+
 .fund-foot {
-  border-top: 0.5px solid #f42;
+  border-top: 0.5px solid rgba(255, 68, 34, 0.25);
   margin-top: 5%;
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 14px;
 }
 
 .fund-foot small {
   margin: 3% 0 0;
-  color: grey;
+  color: #aaa;
   cursor: pointer;
+  font-size: inherit;
 }
 
 /* DEALS SECTION */
