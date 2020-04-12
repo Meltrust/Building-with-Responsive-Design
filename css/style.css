@@ -10,20 +10,33 @@ body {
 
 .main-header {
   display: initial;
-  position: fixed;
   width: 100%;
   top: 0;
+  z-index: 100;
 }
 
-.uppernav {
+.black-nav {
   display: flex;
   width: 100%;
   background: black;
-  color: white;
+  color: gray;
   font-size: 13px;
   align-items: center;
   height: 30px;
-  letter-spacing: 1px;
+}
+
+.upper-right li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.black-nav li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.black-nav li:hover {
+  color: white;
 }
 
 .upper-left {
@@ -34,9 +47,8 @@ body {
   padding-left: 20px;
 }
 
-.upper-left li {
-  margin-right: 10px;
-  cursor: pointer;
+.upper-left li:first-child {
+  color: white;
 }
 
 .upper-right {
@@ -46,9 +58,10 @@ body {
   justify-content: flex-end;
 }
 
-.upper-right li {
-  margin-right: 10px;
-  cursor: pointer;
+.sticky-nav {
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 
 .lowernav {
@@ -66,16 +79,25 @@ body {
   position: relative;
 }
 
+.change-on-mobile {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.change-on-mobile:hover {
+  color: black;
+}
+
 .cover-footer {
   font-size: 11px;
   display: flex;
   list-style: none;
   padding: 0;
-  color: rgb(236, 236, 236);
+  color: gray;
   margin: 0;
 }
 
-.cover-footer li {
+.cover-footer-li {
   margin-right: 10px;
   display: flex;
   align-items: center;
@@ -84,12 +106,11 @@ body {
 .cover-footer a {
   margin-left: 4px;
   text-decoration: none;
-  color: rgb(236, 236, 236);
+  color: gray;
 }
 
 .cover-footer a:hover {
   color: white;
-  font-size: 11.5px;
 }
 
 .lowerlist {
@@ -97,11 +118,6 @@ body {
   display: flex;
   padding-left: 20px;
   transition: 0.5s;
-}
-
-.lowerlist li {
-  margin-right: 30px;
-  cursor: pointer;
 }
 
 .logo-corner-mobile {
@@ -120,15 +136,39 @@ body {
   padding: 16px;
 }
 
+.mobile-nav-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  width: 65px;
+  padding: 0;
+}
+
 .search-button-container {
-  padding: 1%;
-  border-left: 1px solid #eee;
+  border-left: 1px solid rgba(209, 209, 209, 0.521);
+  cursor: pointer;
+  padding: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.search-button-container:hover {
+  color: gray;
+}
+
+.hamburger-button-container {
+  display: none;
+  border-left: 1px solid rgba(209, 209, 209, 0.521);
+  padding: 16px;
+  color: #f42;
+  position: relative;
+  top: 2px;
   cursor: pointer;
 }
 
 .banner {
   display: flex;
-  background: yellow;
+  background: #fd3;
   padding-left: 20px;
   margin: 0;
   height: 30px;
@@ -141,10 +181,11 @@ body {
 .header-grid {
   display: grid;
   grid-template-columns: 3fr 1.3fr;
-  grid-template-rows: 227px 227px;
+  grid-template-rows: 255px 255px;
   grid-gap: 10px;
   color: white;
-  margin: 106px 0.3% 0 0.3%;
+  padding: 4px;
+  margin: 0 auto;
 }
 
 /* prettier-ignore */
@@ -153,17 +194,31 @@ body {
   grid-row: 1/3;
   background-image:
     linear-gradient(
-      135deg,
-      rgba(255, 0, 0, 0.883),
+      180deg,
+      rgba(255, 30, 0, 0.671),
       rgba(29, 28, 28, 0.849) 60%,
       rgb(0, 0, 0) 100%
     ),
-    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/kayleighmcenany-796x419.jpg);
-  background-size: contain;
+    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 2fr;
   padding: 20px;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+/* prettier-ignore */
+.huge:hover {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(255, 30, 0, 0.671),
+      rgba(29, 28, 28, 0.6) 60%,
+      rgb(0, 0, 0) 100%
+    ),
+    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
 }
 
 .huge-top {
@@ -173,13 +228,17 @@ body {
 }
 
 .tnw-cover-logo {
-  width: 400px;
-  margin: 0;
+  width: 500px;
+  position: relative;
+  bottom: 50px;
+  right: 50px;
 }
 
 .cover-date {
   display: grid;
   justify-content: end;
+  position: relative;
+  bottom: 10px;
 }
 
 .huge-bottom {
@@ -203,6 +262,7 @@ body {
   align-content: end;
   grid-template-columns: 1fr;
   grid-template-rows: max-content max-content max-content;
+  cursor: pointer;
 }
 
 /* prettier-ignore */
@@ -213,10 +273,23 @@ body {
   padding-left: 20px;
   background-image:
     linear-gradient(
-      135deg,
-      rgba(255, 0, 0, 0.883),
-      rgba(29, 28, 28, 0.849) 60%,
-      rgb(0, 0, 0) 100%
+      180deg,
+      rgba(0, 0, 0, 0.158) 0%,
+      rgba(7, 7, 7, 0.973) 80%
+    ),
+    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/psychedelic-796x419.png);
+  background-size: cover;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+/* prettier-ignore */
+.aside1:hover {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.014) 0%,
+      rgba(7, 7, 7, 0.973) 80%
     ),
     url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/psychedelic-796x419.png);
 }
@@ -229,13 +302,24 @@ body {
   padding-left: 20px;
   background-image:
     linear-gradient(
-      135deg,
-      rgba(255, 0, 0, 0.883),
-      rgba(29, 28, 28, 0.849) 60%,
-      rgb(0, 0, 0) 100%
+      180deg,
+      rgba(0, 0, 0, 0.158) 0%,
+      rgba(7, 7, 7, 0.973) 80%
     ),
     url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/PlayStation-5-DualSense-796x417.jpg);
   background-size: cover;
+  background-position: 50%;
+}
+
+/* prettier-ignore */
+.aside2:hover {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.014) 0%,
+      rgba(7, 7, 7, 0.973) 80%
+    ),
+    url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/PlayStation-5-DualSense-796x417.jpg);
 }
 
 .aside-head {
@@ -253,7 +337,7 @@ body {
 
 .latest {
   margin: 5% auto;
-  max-width: 1192px;
+  max-width: 1000px;
 }
 
 .latest-news-header {
@@ -394,7 +478,7 @@ body {
   margin: 0;
   flex-direction: column;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .fund-top h3 {
@@ -428,6 +512,15 @@ body {
   top: 20%;
   left: 4%;
   bottom: 20%;
+}
+
+.news-latest-section-headline p::before {
+  content: "\2022";
+  color: #f42;
+  font-weight: bold;
+  display: inline-block;
+  width: 0.5em;
+  margin-left: -1em;
 }
 
 .news-latest-section-headline p {
@@ -571,7 +664,7 @@ body {
 
 .deals-title:hover {
   color: #f42;
-  text-decoration: underline solid 0.5px;
+  text-decoration: underline rgba(255, 68, 34, 0.2) 0.5px;
 }
 
 .deals-price {
@@ -605,7 +698,7 @@ body {
 
 .news-header {
   color: #f42;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.1;
   font-family: sans-serif;
   font-size: 25px;
@@ -629,7 +722,7 @@ body {
   position: relative;
   height: 275px;
   margin: 0 auto;
-  z-index: -1;
+  z-index: 0;
   transition: 0.5s;
 }
 
@@ -639,7 +732,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
   background-size: cover;
   background-position: 50%;
   background-color: #000;
@@ -655,7 +748,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .news-heading {
@@ -664,7 +757,7 @@ body {
   padding: 14px;
   position: absolute;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .news-header-popular {
@@ -687,7 +780,7 @@ body {
 }
 
 .news-header-popular-title:hover {
-  text-decoration: underline;
+  text-decoration: underline rgba(255, 255, 255, 0.2);
 }
 
 .news-article-footer {
@@ -697,8 +790,11 @@ body {
   line-height: 16px;
   display: flex;
   flex: 1;
-  flex-direction: column;
   align-items: flex-start;
+}
+
+.news-article-footer li:first-child:hover {
+  color: white;
 }
 
 .news-latest-section {
@@ -731,6 +827,11 @@ body {
   line-height: 1.25;
   max-height: 56px;
   margin: 0;
+  z-index: 0;
+}
+
+.news-latest-header:hover {
+  text-decoration: underline rgba(255, 68, 34, 0.2);
 }
 
 .nes-latest-img {
@@ -830,9 +931,8 @@ body {
 }
 
 .main-footer-upper {
-  border: solid 3px;
   width: 100%;
-  padding: 3em 0;
+  padding: 2.5em 0;
   background: #131313;
 }
 
@@ -858,7 +958,7 @@ body {
   margin: 0 0 1.5em 0;
 }
 
-.main-footer-upper-links-container-iconslist li {
+.main-footer-upper-links-container-iconslist-li {
   margin: 0 8px;
   display: flex;
 }
@@ -867,15 +967,15 @@ body {
   background: #333;
   border-radius: 50%;
   height: 40px;
-  padding: 12px;
   text-align: center;
   width: 40px;
-  font-size: xx-large;
+  font-size: inherit;
   cursor: pointer;
 }
 
 .main-footer-upper-links-container-iconslist div:hover {
   background-color: #000;
+  transition: 0.3s;
 }
 
 .fa-facebook {
@@ -884,8 +984,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
-  right: 1px;
+  top: 11px;
 }
 
 .fa-twitter-square {
@@ -894,7 +993,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
+  top: 11px;
 }
 
 .fa-youtube-square {
@@ -903,7 +1002,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
+  top: 11px;
 }
 
 .fa-instagram {
@@ -912,7 +1011,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
+  top: 11px;
 }
 
 .fa-pinterest-p {
@@ -921,7 +1020,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
+  top: 11px;
 }
 
 .fa-rss {
@@ -930,7 +1029,7 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
+  top: 11px;
 }
 
 .fa-envelope {
@@ -939,11 +1038,10 @@ body {
   line-height: 0.75em;
   color: #fff;
   position: relative;
-  top: 3.9px;
-  right: 1px;
+  top: 11px;
 }
 
-.footer-links li {
+.footer-links-li {
   color: #aaa;
   margin: 0 6px;
   font-family: sans-serif;
@@ -953,12 +1051,12 @@ body {
   cursor: pointer;
 }
 
-.footer-links li:hover {
+.footer-links-li:hover {
   color: #fff;
 }
 
 .main-footer-lower {
-  padding: 3em 0;
+  padding: 2.5em 0;
   background: #000;
   color: #aaa;
   font-size: 13px;
@@ -970,6 +1068,10 @@ body {
   padding: 0 20px;
   display: flex;
   justify-content: center;
+}
+
+.main-footer-lower-container b {
+  color: #f42;
 }
 
 .main-footer-lower-container img {
@@ -984,6 +1086,18 @@ body {
 }
 
 @media (max-width: 1023px) {
+  .lowerlist {
+    padding-left: 5%;
+  }
+
+  .logo-corner-mobile {
+    visibility: visible;
+  }
+
+  .logo-corner-mobile:hover {
+    background-image: url(/../img/logobackground.gif);
+  }
+
   .latest {
     width: 95%;
     min-width: 95%;
@@ -997,16 +1111,8 @@ body {
 
   .latest-grid article {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     margin: 2px 0;
-  }
-
-  .art-foot {
-    margin: 0 0 0 90px;
-    color: rgb(182, 182, 182);
-    font-size: 12px;
-    padding-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
   .latest-grid article:hover {
@@ -1023,6 +1129,7 @@ body {
 
   .funding {
     width: 95%;
+    margin-top: 20%;
   }
 
   .funding-main {
@@ -1041,10 +1148,29 @@ body {
     display: none;
   }
 
+  /* prettier-ignore */
   .huge {
     background-size: auto;
     display: grid;
     grid-template-rows: 1fr;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.158) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
+  }
+
+  /* prettier-ignore */
+  .huge:hover {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.014) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
   }
 
   .latest-deals {
@@ -1066,6 +1192,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .black-nav {
+    display: none;
+  }
+
   .logo-corner-mobile {
     visibility: visible;
   }
@@ -1074,6 +1204,10 @@ body {
     -webkit-padding-start: initial;
     margin-bottom: 0;
     max-height: -webkit-fill-available;
+  }
+
+  .hamburger-button-container {
+    display: block;
   }
 
   .latest-grid {
@@ -1139,6 +1273,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .art-foot {
+    margin: 0 0 0 90px;
+    color: rgb(182, 182, 182);
+    font-size: 12px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .main-footer {
     margin-top: 5%;
   }
@@ -1150,14 +1292,6 @@ body {
 
   .main-footer-lower span {
     padding-top: 10px;
-  }
-
-  .main-footer-upper-links-container-iconslist li:last-child {
-    display: none;
-  }
-
-  .main-footer-upper-links-container-iconslist li:first-of-type {
-    display: none;
   }
 
   .funding-main {
@@ -1228,29 +1362,73 @@ body {
     margin-bottom: 0;
   }
 
-  .header-grid {
-    grid-template-columns: 100%;
-    grid-template-rows: 182px 182px 182px;
-    grid-row-gap: 10px;
+  .banner {
+    height: 60px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    justify-content: center;
   }
 
+  .header-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 28vh 28vh 28vh;
+    grid-row-gap: 10px;
+    padding-top: 0;
+  }
+
+  /* prettier-ignore */
   .huge {
     grid-column: 1/2;
     grid-row: 1/2;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.158) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
+  }
+
+  /* prettier-ignore */
+  .huge:hover {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.014) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/1-18-796x417.jpg);
   }
 
   .title-cover {
     font-size: 24px;
   }
 
+  /* prettier-ignore */
   .aside1 {
     grid-column: 1/2;
     grid-row: 2/3;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.158) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/psychedelic-796x419.png);
   }
+
+  /* prettier-ignore */
 
   .aside2 {
     grid-column: 1/2;
     grid-row: 3/4;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.158) 0%,
+        rgba(7, 7, 7, 0.973) 80%
+      ),
+      url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/PlayStation-5-DualSense-796x417.jpg);
   }
 
   .deals-body {
@@ -1263,12 +1441,12 @@ body {
   }
 
   .latest-deals {
-    height: 684px;
+    height: 70vh;
   }
 
   .deals {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     margin: 15px 0;
   }
 
