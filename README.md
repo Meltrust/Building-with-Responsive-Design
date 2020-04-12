@@ -14,7 +14,7 @@ This project consists of replicating the The Next Web website putting emphasis o
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://rawcdn.githack.com/Meltrust/Building-with-Responsive-Design/33339a85c1c6c2ec61829f6da86ef722550c02c4/index.html)
 
 ## Getting Started
 
