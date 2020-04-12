@@ -2,7 +2,7 @@
 
 > We’ll be cloning The Next Web, a tech-focused magazine which uses media queries to gracefully degrade their site as the window size is reduced.
 
-![screenshot](./app_screenshot.png)
+![screenshot](Project-Screenshot.png)
 
 This project consists of replicating the The Next Web website putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered.
 
@@ -14,12 +14,12 @@ This project consists of replicating the The Next Web website putting emphasis o
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://rawcdn.githack.com/Meltrust/Building-with-Responsive-Design/a69ef806a065293b3af09c0ec8687e48ef6924ac/index.html)
 
 ## Getting Started
 
 **To get a local copy up and running follow these simple example steps.**
+
 - Clone the project unto your local machine
 - Navigate into `index.html` file and run on the browser
 
