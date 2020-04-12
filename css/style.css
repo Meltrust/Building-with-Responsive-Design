@@ -1439,7 +1439,7 @@ body {
 
   .deals-body {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 75px);
     width: 100%;
     cursor: pointer;
     gap: 10px;
@@ -1447,7 +1447,7 @@ body {
   }
 
   .latest-deals {
-    height: 70vh;
+    height: auto;
   }
 
   .deals {
