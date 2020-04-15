@@ -23,12 +23,17 @@ This project consists of replicating the The Next Web website putting emphasis o
 - Clone the project unto your local machine
 - Navigate into `index.html` file and run on the browser
 
+## Future Features:
+
+- Implement responsive design.
+
 ## Authors
 
 👤 **Miguel Tapia**
 
 - Github: [@meltrust](https://github.com/meltrust)
 - Linkedin: [meltrust](https://www.linkedin.com/in/meltrust/)
+- Contact me: original.mtapia@outlook.com
 
 👤 **Smith Nkereuwem**
 
